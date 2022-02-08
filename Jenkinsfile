@@ -45,4 +45,12 @@ pipeline {
             }
         }
     }
+    
+    post {
+        always {
+            script {
+                archiveArtifacts artifacts: 'artifacats/*', fingerprint: true
+            }
+        }
+    }
 }
