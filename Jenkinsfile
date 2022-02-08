@@ -20,6 +20,8 @@ pipeline {
             steps {
                 echo 'Checkout..'
                 script {
+                    deleteDir()
+                    checkout scm
                     getGitVariables()
                     sh "mkdir artifacts && touch artifacts/cicd-dashboard-data.txt"
                     sh "echo git_branch=${git_branch} >> artifacts/cicd-dashboard-data.txt"
