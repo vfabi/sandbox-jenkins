@@ -21,11 +21,11 @@ pipeline {
                 echo 'Checkout..'
                 script {
                     getGitVariables()
-                    sh "mkdir artifacats && touch artifacats/cicd-dashboard-data.txt"
-                    sh "echo git_branch=${git_branch} >> artifacats/cicd-dashboard-data.txt"
-                    sh "echo git_author=${git_author} >> artifacats/cicd-dashboard-data.txt"
-                    sh "echo git_author_email=${git_author_email} >> artifacats/cicd-dashboard-data.txt"
-                    stash includes: 'artifacats/cicd-dashboard-data.txt', name: 'cicd-dashboard-data'
+                    sh "mkdir artifacts && touch artifacts/cicd-dashboard-data.txt"
+                    sh "echo git_branch=${git_branch} >> artifacts/cicd-dashboard-data.txt"
+                    sh "echo git_author=${git_author} >> artifacts/cicd-dashboard-data.txt"
+                    sh "echo git_author_email=${git_author_email} >> artifacts/cicd-dashboard-data.txt"
+                    stash includes: 'artifacts/cicd-dashboard-data.txt', name: 'cicd-dashboard-data'
                 }
             }
         }
