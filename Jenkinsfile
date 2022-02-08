@@ -25,8 +25,12 @@ pipeline {
                     getGitVariables()
                     sh "mkdir artifacts && touch artifacts/cicd-dashboard-data.txt"
                     sh "echo git_branch=${git_branch} >> artifacts/cicd-dashboard-data.txt"
+                    sh "echo git_commit=${git_commit} >> artifacts/cicd-dashboard-data.txt"
                     sh "echo git_author=${git_author} >> artifacts/cicd-dashboard-data.txt"
                     sh "echo git_author_email=${git_author_email} >> artifacts/cicd-dashboard-data.txt"
+                    sh "echo deploy_environment=sandbox >> artifacts/cicd-dashboard-data.txt"
+                    sh "echo deploy_namespace=default >> artifacts/cicd-dashboard-data.txt"
+                    sh "echo deploy_apprelease=1.0 >> artifacts/cicd-dashboard-data.txt"
                     stash includes: 'artifacts/cicd-dashboard-data.txt', name: 'cicd-dashboard-data'
                 }
             }
