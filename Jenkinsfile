@@ -30,7 +30,7 @@ pipeline {
                     sh "echo git_author_email=${git_author_email} >> artifacts/cicd-dashboard-data.txt"
                     sh "echo deploy_success=true >> artifacts/cicd-dashboard-data.txt"
                     sh "echo deploy_environment=production >> artifacts/cicd-dashboard-data.txt"
-                    sh "echo deploy_namespace=default >> artifacts/cicd-dashboard-data.txt"
+                    sh "echo deploy_namespace=apps >> artifacts/cicd-dashboard-data.txt"
                     sh "echo deploy_apprelease=1.0 >> artifacts/cicd-dashboard-data.txt"
                     stash includes: 'artifacts/cicd-dashboard-data.txt', name: 'cicd-dashboard-data'
                 }
