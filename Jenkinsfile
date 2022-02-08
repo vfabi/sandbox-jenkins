@@ -25,7 +25,7 @@ pipeline {
                     getGitVariables()
                     sh "mkdir artifacts && touch artifacts/cicd-dashboard-data.txt"
                     sh "echo git_branch=${git_branch} >> artifacts/cicd-dashboard-data.txt"
-                    sh "echo git_commit=${git_commit} >> artifacts/cicd-dashboard-data.txt"
+                    sh "echo git_commit=${git_hash} >> artifacts/cicd-dashboard-data.txt"
                     sh "echo git_author=${git_author} >> artifacts/cicd-dashboard-data.txt"
                     sh "echo git_author_email=${git_author_email} >> artifacts/cicd-dashboard-data.txt"
                     sh "echo deploy_success=true >> artifacts/cicd-dashboard-data.txt"
