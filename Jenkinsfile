@@ -51,7 +51,7 @@ pipeline {
     post {
         always {
             script {
-                archiveArtifacts artifacts: 'artifacats/*', fingerprint: true
+                archiveArtifacts artifacts: 'artifacts/*', fingerprint: true
             }
         }
     }
