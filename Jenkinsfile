@@ -20,6 +20,7 @@ pipeline {
             steps {
                 echo 'Checkout..'
                 script {
+                    getGitVariables()
                     sh "mkdir artifacats && touch artifacats/cicd-dashboard-data.txt"
                     sh "echo git_branch=${git_branch} >> artifacats/cicd-dashboard-data.txt"
                     sh "echo git_author=${git_author} >> artifacats/cicd-dashboard-data.txt"
