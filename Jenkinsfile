@@ -1,4 +1,4 @@
-@Library('jsl@master')_
+@Library('jsl@k8s')_
 
 def config = [
     projectType: 'application',
