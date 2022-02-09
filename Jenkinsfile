@@ -3,8 +3,8 @@
 def config = [
     projectType: "application",
     buildTool: "nodejs",
-    releaseBranches: ['release-1', 'release-2'],
-    stages: ['Preparation', 'Compile'],
+    releaseBranches: ['release-1'],
+    stages: ['Compile'],
     defaultDeployEnvironment: "dev"
 ]
 Pipeline(config)
