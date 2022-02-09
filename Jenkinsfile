@@ -1,10 +1,10 @@
 @Library('jsl@master')_
 
 def config = [
-    projectType: "application",
-    buildTool: "nodejs",
+    projectType: 'application',
+    buildTool: 'nodejs',
     releaseBranches: ['release-1'],
-    stages: ['Compile'],
-    defaultDeployEnvironment: "dev"
+    stages: ['Preparation'],
+    defaultDeployEnvironment: 'dev'
 ]
 Pipeline(config)
