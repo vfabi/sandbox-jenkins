@@ -5,6 +5,6 @@ def config = [
     buildTool: "none",
     releaseBranches: ['master', 'develop'],
     stages: ['Preparation', 'Compile'],
-    defaultDeployEnvironment: "develop"
+    defaultDeployEnvironment: "dev"
 ]
 Pipeline(config)
