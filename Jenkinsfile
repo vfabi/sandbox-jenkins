@@ -4,7 +4,7 @@ def config = [
     projectType: "application",
     buildTool: "none",
     releaseBranches: ['master', 'develop'],
-    stages: ['Preparation', 'Compile', 'Deploy'],
+    stages: ['Preparation', 'Compile'],
     defaultDeployEnvironment: "develop"
 ]
 Pipeline(config)
