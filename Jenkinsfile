@@ -2,8 +2,8 @@
 
 def config = [
     projectType: "application",
-    buildTool: "none",
-    releaseBranches: ['master', 'develop'],
+    buildTool: "nodejs",
+    releaseBranches: ['release-1', 'release-2'],
     stages: ['Preparation', 'Compile'],
     defaultDeployEnvironment: "dev"
 ]
