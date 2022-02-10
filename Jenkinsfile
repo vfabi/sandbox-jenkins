@@ -3,7 +3,7 @@
 def config = [
     projectType: 'application',
     buildTool: 'nodejs',
-    releaseBranches: ['release-1', 'newbranch2'],
+    releaseBranches: ['release-1'],
     stages: ['Preparation','Deploy'],
     defaultDeployEnvironment: 'dev'
 ]
