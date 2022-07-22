@@ -1,2 +1,2 @@
 # sadnbox-jenkins
-Sandbox repo for Jenkins
+Sandbox repo for Jenkinsfile examples.
